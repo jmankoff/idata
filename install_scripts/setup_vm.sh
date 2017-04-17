@@ -5,5 +5,6 @@ sudo chgrp -R google-sudoers /usr/local/
 sudo chmod g+w /usr/local
 sudo apt-get install git
 sudo apt-get install emacs
+sudo apt-get install lynx
 sudo apt-get install libapache2-mod-wsgi
 sudo apt-get install libapache2-mod-wsgi-py3

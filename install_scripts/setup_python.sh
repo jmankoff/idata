@@ -19,6 +19,7 @@ pip install flask
 sudo apt-get install freetype2-demos
 sudo apt-get install libfreetype6-dev libxft-dev
 pip install numpy scipy matplotlib pandas seaborn
+pip install sklearn
 
 SRC=$HOME/idata/install_scripts/jupyter_notebook_config.py
 CONFIG=$HOME/.jupyter/jupyter_notebook_config.py

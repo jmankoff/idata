@@ -8,3 +8,5 @@ sudo apt-get install emacs
 sudo apt-get install lynx
 sudo apt-get install python3
 sudo apt-get install libapache2-mod-wsgi-py3
+sudo apt-get install unzip
+

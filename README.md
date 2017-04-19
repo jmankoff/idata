@@ -1,4 +1,5 @@
-# idata
+# iData
+This is the repository for the iData class on *Interactive Data Science*, which can be found on the web at make4all.org/idata
 ## Get things ready
 ### first download git
 sudo apt-get install git

@@ -7,15 +7,7 @@ You need to make use of Compute Engine to have a working space in which you can 
 To create an instance, you need to first give yourself the proper permissions to use it. To do this, go to the IAM & Admin menu, and select both the role 'Compute Instance Admin (beta)' and 'App Engine Admin' for your account. Also be sure to check the box allowing HTTP access.
 ![picture alt](https://github.com/jmankoff/idata/blob/master/docs/images/1_permissions.png "Permissions")
 
-[comment]: # Next you will need to create a service account that also has proper permissions. I called mine cloud-deployer.  When you create your service account, be sure to select the following roles: Project owner; App engine admin; Compute Instance Admin (beta). That creation process downloads a file. You need to upload it to your vm. For now just take not of it's location.
-
 To set up Compute Engine, use the [Linux Quickstart](https://cloud.google.com/compute/docs/quickstarts).
-
-[comment]: # In addition, when you create the instance, you will need to specify a service account and ensure that it has all the correct permissions:
-
-[comment]: # ![picture alt](https://github.com/jmankoff/idata/blob/master/docs/images/3_instance_service_account.png "Specify Service Account")
-
-[comment]: # ![picture alt](https://github.com/jmankoff/idata/blob/master/docs/images/2_service.png "Service Account")
 
 Here is what your network looks like on your instance page. The green checkmark indicates that it is running. You can now check if your instance is working by clicking on the word 'SSH' on the VM instances page:
 ![picture alt](https://github.com/jmankoff/idata/blob/master/docs/images/4_compute_instances.png "Specify Service Account")

@@ -1,22 +1,58 @@
 # iData
-This is the repository for the iData class on *Interactive Data Science*, which can be found on the web at make4all.org/idata
-## Get things ready
-### first download git
-sudo apt-get install git
-### then download this repository
-git clone https://github.com/jmankoff/idata.git
-### then change directories to the location of the install scripts
-cd ~/idata/install_scripts/
-### and make them executable
-chmod +x *.sh
+This is the repository for the iData class on *Interactive Data Science*, which can be found on the web at [Make4All/idata](make4all.org/idata)
 
-## the scripts are run in this order. Be sure to watch the first one and type 'y' when prompted
-### setup_vm installs base software for the vm, apache and so on
-./setup_vm.sh 
-### setup_python installs python and related libraries you'll need
-./setup_python.sh 
-### move_files correctly configures apache
-./move_files.sh
+## Get things ready ## 
+You need to make use of Compute Engine to have a working space in which you can install arbitrary python libraries. 
+
+To create an instance, you need to first give yourself the proper permissions to use it. To do this, go to the IAM & Admin menu, and select both the role 'Compute Instance Admin (beta)' and 'App Engine Admin' for your account. Also be sure to check the box allowing HTTP access.
+![picture alt](https://github.com/jmankoff/idata/blob/master/docs/images/1_permissions.png "Permissions")
+
+[comment]: # Next you will need to create a service account that also has proper permissions. I called mine cloud-deployer.  When you create your service account, be sure to select the following roles: Project owner; App engine admin; Compute Instance Admin (beta). That creation process downloads a file. You need to upload it to your vm. For now just take not of it's location.
+
+To set up Compute Engine, use the [Linux Quickstart](https://cloud.google.com/compute/docs/quickstarts).
+
+[comment]: # In addition, when you create the instance, you will need to specify a service account and ensure that it has all the correct permissions:
+
+[comment]: # ![picture alt](https://github.com/jmankoff/idata/blob/master/docs/images/3_instance_service_account.png "Specify Service Account")
+
+[comment]: # ![picture alt](https://github.com/jmankoff/idata/blob/master/docs/images/2_service.png "Service Account")
+
+Here is what your network looks like on your instance page. The green checkmark indicates that it is running. You can now check if your instance is working by clicking on the word 'SSH' on the VM instances page:
+![picture alt](https://github.com/jmankoff/idata/blob/master/docs/images/4_compute_instances.png "Specify Service Account")
+
+...which will open a shell in a browser window:
+![picture alt](https://github.com/jmankoff/idata/blob/master/docs/images/5_shell.png "Specify Service Account")
+
+Finally, you may wish to modify your firewall for testing things such as Jupyter, if you plan to run them on your compute server. First, you will need to set your VM to allow connections to your notebook. At the command line in your shell, you can type
+gcloud compute firewall-rules create allow-http --description "Incoming http allowed." --allow tcp:9999 --format json
+or if you have any trouble with that, just do it in the GUI:
+![picture alt](https://github.com/jmankoff/idata/blob/master/docs/images/6_firewall.png "Specify Service Account")
+
+
+## Install Software on your virtual machine ##
+
+First download git:
+- - - - 
+     sudo apt-get install git
+Then download this repository
+- - - - 
+     git clone https://github.com/jmankoff/idata.git
+
+Then change directories to the location of the install scripts and make them executable
+- - - - 
+     cd ~/idata/install_scripts/
+     chmod +x *.sh
+
+the scripts are run in this order. Be sure to watch the first one and type 'y' when prompted
+First setup_vm installs base software for the vm, apache and so on
+- - - - 
+     ./setup_vm.sh 
+Then setup_python installs python and related libraries you'll need
+- - - - 
+     ./setup_python.sh 
+Finally move_files correctly configures apache
+- - - - 
+     ./move_files.sh
 
 
 

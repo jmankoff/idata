@@ -18,10 +18,17 @@ pip install jupyter
 pip install flask
 sudo apt-get install freetype2-demos
 sudo apt-get install libfreetype6-dev libxft-dev
+sudo apt-get install fondu
+sudo apt-get install xfstt
+sudo apt-get install ttf-bitstream-vera
+sudo apt-get install ttf-freefont
+sudo fc-cache -fv
 pip install numpy scipy matplotlib pandas seaborn
 pip install sklearn
 pip install pydotplus
+
 sudo apt-get install graphviz
+sudo apt-get install python-tables
 
 
 SRC=$HOME/idata/install_scripts/jupyter_notebook_config.py

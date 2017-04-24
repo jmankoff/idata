@@ -46,7 +46,9 @@ Finally move_files correctly configures apache
 - - - - 
      ./move_files.sh
 
-To access your main website, go to the IP address listed on your google compute page. 
+To access your main website, go to the IP address listed on your google compute instances page (you can see it listed below, but it will be different for your instance, possibly every time you restart it, unless you pay for a fixed dip and tie it to a hostname)
+![picture alt](https://github.com/jmankoff/idata/blob/master/docs/images/4_compute_instances.png "Specify Service Account")
+
 To run your notebook, you simply type
 - - - -
      cd

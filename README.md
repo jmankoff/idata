@@ -7,7 +7,7 @@ You need to make use of Compute Engine to have a working space in which you can 
 To create an instance, you need to first give yourself the proper permissions to use it. To do this, go to the IAM & Admin menu, and select both the role 'Compute Instance Admin (beta)' and 'App Engine Admin' for your account. Also be sure to check the box allowing HTTP access.
 ![picture alt](https://github.com/jmankoff/idata/blob/master/docs/images/1_permissions.png "Permissions")
 
-To set up Compute Engine, use the [Linux Quickstart](https://cloud.google.com/compute/docs/quickstarts).
+To set up Compute Engine, use the [Linux Quickstart](https://cloud.google.com/compute/docs/quickstarts). However, note that you may want a machine with more RAM for the final byte (machine learning). You will only be able to load about 1/10th of the training data with the 3.75 gig of RAM in the smallest machine.
 
 Here is what your network looks like on your instance page. The green checkmark indicates that it is running. You can now check if your instance is working by clicking on the word 'SSH' on the VM instances page:
 ![picture alt](https://github.com/jmankoff/idata/blob/master/docs/images/4_compute_instances.png "Specify Service Account")

@@ -46,7 +46,13 @@ Finally move_files correctly configures apache
 - - - - 
      ./move_files.sh
 
+To access your main website, go to the IP address listed on your google compute page. 
+To run your notebook, you simply type
+- - - -
+     cd
+     jupyter notebook
 
-
+To access your notebook, you go to the same IP address, with a :8888 on it. This will only work when the notebook is running. 
+     
 
 
